@@ -1,8 +1,8 @@
 package dev.omobile.shell.data
 
-import android.app.LauncherApps
 import android.content.Context
 import android.content.Intent
+import android.content.pm.LauncherApps
 import android.hardware.SensorManager
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
