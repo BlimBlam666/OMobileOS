@@ -18,7 +18,6 @@ import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.weight
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -143,10 +142,10 @@ fun OMMobileApp(viewModel: MainViewModel = viewModel()) {
     ) { padding ->
         Box(Modifier.padding(padding)) {
             when (section) {
-                Section.HOME -> HomeScreen(status, execute)
-                Section.APPS -> AppsScreen(apps, viewModel::launch, execute)
+                Section.HOME -> HomeScreen(status, ::execute)
+                Section.APPS -> AppsScreen(apps, viewModel::launch, ::execute)
                 Section.FIELD -> FieldScreen(status, sensors)
-                Section.SYSTEM -> SystemScreen(status, apps.size, sensors.size, execute)
+                Section.SYSTEM -> SystemScreen(status, apps.size, sensors.size, ::execute)
             }
         }
     }
