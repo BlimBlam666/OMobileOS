@@ -4,6 +4,16 @@ An Omarchy-inspired, command-first Android home environment for the Google Pixel
 
 OM Mobile 0.1 is deliberately a launcher, not a custom ROM. It can be installed and removed like a normal Android application. It does not require an unlocked bootloader, root access, a factory reset, or replacing Android 14.
 
+## Direction: modular field computer
+
+OMobileOS is growing toward a local-first, modular field computer: a pocket instrument for sensing, diagnostics, communication, privacy awareness, and technical support.
+
+The Pixel provides the interface, ordinary connectivity, sensors, maps, storage, and reports. Optional BLE, USB, and TCP accessories provide capabilities that stock Android cannot safely expose, including raw Wi-Fi observation, supported Rayhunter cellular analysis, Meshtastic LoRa communication, and future environmental or SDR instruments.
+
+The system remains useful without accessories and preserves the rule: **phone first, Linux second; evidence before claims; usefulness before complexity.**
+
+Read the full [Modular Field Computer Concept](docs/MODULAR_FIELD_COMPUTER.md) and [development roadmap](docs/ROADMAP.md).
+
 ## Alpha 1 checkpoint
 
 The current source includes:
@@ -65,8 +75,10 @@ The project uses JDK 17, Gradle 8.9, Android Gradle Plugin 8.7.3, Kotlin 2.0.21,
 
 Alpha 1 asks only for network-state and internet access. It does not request location, contacts, phone-call, SMS, camera, microphone, storage, Bluetooth, NFC, or notification permissions. Existing Android applications continue performing those jobs.
 
-Future Field Tools features will introduce permissions one at a time, with a plain-language explanation and a useful permission-free fallback wherever possible.
+Future Field Tools features will introduce permissions one at a time, with a plain-language explanation and a useful permission-free fallback wherever possible. Background or stealth collection is not part of the design.
 
 ## Project boundary
 
-OM Mobile is an independent, experimental project inspired by command-driven Linux desktop ideas. It is not an official Omarchy project and does not yet modify LineageOS, Android SystemUI, the bootloader, or the Pixel firmware.
+OM Mobile is an independent, experimental project inspired by command-driven Linux desktop ideas and the usefulness of a science-fiction field instrument. It is not an official Omarchy or Star Trek project and does not use their branding.
+
+OM Mobile does not yet modify LineageOS, Android SystemUI, the bootloader, or the Pixel firmware. Detection features must report their source, method, limitations, and confidence rather than presenting a heuristic as certainty.
